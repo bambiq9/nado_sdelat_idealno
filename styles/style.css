@@ -2,12 +2,9 @@ html {
   block-size: 100%;
 }
 
-body {
+.page {
   block-size: inherit;
   min-inline-size: 800px;
-}
-
-.page {
   position: relative;
   display: flex;
   justify-content: center;
@@ -19,8 +16,6 @@ body {
   inset: 0;
   z-index: 1;
   background-color: rgb(255 255 255 / 0.3);
-  block-size: 100%;
-  inline-size: 100%;
 }
 
 .page__video {
@@ -35,6 +30,7 @@ body {
 .page__title {
   z-index: 1;
   padding-block-start: 60px;
+  block-size: fit-content;
   font-family: Raleway;
   font-weight: 800;
   font-size: 116px;
@@ -43,6 +39,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   inline-size: 740px;
+  cursor: pointer;
 }
 
 .page__title::after {
