@@ -1,0 +1,73 @@
+html {
+  block-size: 100%;
+}
+
+body {
+  block-size: inherit;
+  min-inline-size: 800px;
+}
+
+.page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgb(255 255 255 / 0.3);
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.page__video {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  font-family: Raleway, sans-serif;
+  inline-size: 100%;
+  block-size: inherit;
+}
+
+.page__title {
+  z-index: 1;
+  padding-block-start: 60px;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 116px;
+  line-height: 136.18px;
+  letter-spacing: 0.035em;
+  text-align: center;
+  text-transform: uppercase;
+  inline-size: 740px;
+}
+
+.page__title::after {
+  content: '*';
+}
+
+.page__title:hover {
+  color: #4c4c4c;
+}
+
+.page__title:hover::before {
+  content: 'На самом деле нет.\AВажнее &mdash; научиться ошибаться.';
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 25px;
+  padding-inline: 44px;
+  padding-block: 36px;
+  box-shadow: #000 0 15px;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 35px;
+  text-align: left;
+  background-color: #fff;
+  inset-block-start: 180px;
+  inset-inline-end: 20px;
+  white-space: pre;
+}
