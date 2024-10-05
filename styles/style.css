@@ -3,11 +3,11 @@ html {
 }
 
 .page {
-  block-size: inherit;
-  min-inline-size: 800px;
   position: relative;
   display: flex;
   justify-content: center;
+  block-size: inherit;
+  min-inline-size: 800px;
 }
 
 .page::before {
@@ -30,7 +30,6 @@ html {
 .page__title {
   z-index: 1;
   padding-block-start: 60px;
-  block-size: fit-content;
   font-family: Raleway;
   font-weight: 800;
   font-size: 116px;
@@ -38,8 +37,9 @@ html {
   letter-spacing: 0.035em;
   text-align: center;
   text-transform: uppercase;
-  inline-size: 740px;
   cursor: pointer;
+  block-size: fit-content;
+  inline-size: 740px;
 }
 
 .page__title::after {
@@ -51,7 +51,7 @@ html {
 }
 
 .page__title:hover::before {
-  content: 'На самом деле нет.\AВажнее &mdash; научиться ошибаться.';
+  content: 'На самом деле нет.\AВажнее — научиться ошибаться.';
   position: absolute;
   border: 2px solid #000;
   border-radius: 25px;
@@ -63,6 +63,7 @@ html {
   font-size: 35px;
   line-height: 35px;
   text-align: left;
+  text-transform: none;
   background-color: #fff;
   inset-block-start: 180px;
   inset-inline-end: 20px;
